@@ -7,10 +7,10 @@ module.exports = {
   mode: "development",
   devtool: "inline-source-map",
   devServer: {
-    contentBase: "./dist",
+    contentBase: "./build",
   },
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
     publicPath: "/",
   },
@@ -43,7 +43,7 @@ module.exports = {
       },
     ],
   },
-  devServer: { contentBase: "./dist", historyApiFallback: true },
+  devServer: { contentBase: "./build", historyApiFallback: true },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "index.html"),
